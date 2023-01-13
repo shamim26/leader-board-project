@@ -1,0 +1,234 @@
+ /* font */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* utilities */
+body{
+    background-color: #F3F1FF;
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 870px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+hr{
+    border: 1px solid #D1D1D1;
+    margin-bottom: 30px;
+}
+
+/* -----------------------
+Top players section styles
+-------------------------- */
+
+.top-players{
+    
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.section-title{
+    color: #562EFF;
+    margin-top: 3px;
+    
+}
+.players{
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.player{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    width: 56px;
+    height: 56px;
+}
+.player-name{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+/* --------------
+Top Blogs Styles
+----------------- */
+
+.blog-posts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+    grid-column-gap: 45px;
+}
+.blog{
+    display: flex;
+    gap: 16px;
+}
+.blog img{
+    width: 177px;
+    height: 117px;
+}
+.blog-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+.blog-author{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.blog-author a{
+    text-decoration: none;
+    color: #562EFF;
+}
+
+/* ------------------
+Latest Courses Styles 
+---------------------*/
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    border-radius: 10px;
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.05);
+    padding-left: 10px;
+}
+.course img{
+    width: 224px;
+    height: 104px;
+    margin-bottom: 20px;
+}
+.course-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+.course-author{
+    color: #ED6B4F;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.course-info{
+        margin-top: 20px;
+    }
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+.course-info .ratings{
+    margin-left: 10px;
+}
+.course-info .duration{
+    color: #ED6B4F;
+    background: #FFE4E8;
+    border-radius: 14px;
+    padding: 5px 5px;
+    margin-left: 15px;
+}
+
+/* ---------------
+   Media Queries
+------------------ */
+
+/* Mobile Devices */
+
+@media screen and (max-width:688px) {
+    /* Top player responsive */
+    .section-title{
+        color: #562EFF;
+        margin: 3px 0px 20px 20px;
+    }
+    .container{
+        width: 100%;
+        padding: 15px 0;
+    }
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 10px;
+    }
+    .player{
+        flex-direction: column;
+    }
+    /* Top Blog responsive */
+
+    .blog-posts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog{
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog img{
+        width: 320px;
+        height: 160px;  
+    }
+    .blog .blog-info{
+        text-align: center;
+    }
+    /* Latest Course Responsive */
+    .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .course{
+        margin-bottom: 25px;
+    }
+    .course img{
+        width: 320px;
+        height: 160px;
+    }
+    .course-title{
+        margin: 0;
+    }
+}
+
+/* Tablet Devices */
+
+@media screen and (min-width:689px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .section-title{
+        color: #562EFF;
+        margin: 3px 0px 15px 20px;
+        
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 30px;
+    }
+    .player img{
+        width: 100px;
+        height: 100px;
+    }
+    /* blog responsive */
+    .blog-posts{
+        margin-left: 30px;
+    }
+    /* course responsive */
+    .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+   .course{
+    margin: 10px;
+   }
+    .course img{
+        width: 70%;
+        height: auto;
+    }
+    .course-title, .course-author, .course-info{
+        padding-left: 20px;
+    }
+}
